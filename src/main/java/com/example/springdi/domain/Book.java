@@ -1,4 +1,4 @@
-package com.example.springdi;
+package com.example.springdi.domain;
 
 public class Book {
     private final Author author;

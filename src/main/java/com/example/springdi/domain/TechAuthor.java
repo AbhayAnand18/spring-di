@@ -1,4 +1,4 @@
-package com.example.springdi;
+package com.example.springdi.domain;
 
 public class TechAuthor extends Author {
     @Override

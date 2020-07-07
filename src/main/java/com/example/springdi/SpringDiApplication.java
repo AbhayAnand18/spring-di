@@ -1,5 +1,8 @@
 package com.example.springdi;
 
+import com.example.springdi.domain.Book;
+import com.example.springdi.domain.FictionAuthor;
+import com.example.springdi.domain.TechAuthor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
