@@ -16,7 +16,7 @@ public class ApplicationConfiguration {
     //  this method
     //  We need Author object
 
-    @Bean
+    @Bean()
     public Author getAuthor() {
         return new FictionAuthor();
     }
