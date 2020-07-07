@@ -11,4 +11,8 @@ public class Book {
     public Book(Author a) {
         author = a;
     }
+
+    public Author getAuthor() {
+        return author;
+    }
 }
