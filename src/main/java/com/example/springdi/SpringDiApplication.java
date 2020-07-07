@@ -18,13 +18,16 @@ public class SpringDiApplication {
         //  Get the context
         ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
 
-        //  Get the dependency from the context
-        Author author = context.getBean(Author.class);
+        //  Get the dependencies from the context by specifying the name of Beans
+        Author fictionAuthor = context.getBean("fiction", Author.class);
+        Author techAuthor = context.getBean("tech", Author.class);
 
-        //  Use the dependency
-        Book book = new Book(author);
+        //  Use the dependencies
+        Book book1 = new Book(fictionAuthor);
+        Book book2 = new Book(techAuthor);
 
-        book.getAuthor().getDetails();
+        book1.getAuthor().getDetails();
+        book2.getAuthor().getDetails();
     }
 
 }

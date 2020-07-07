@@ -1,23 +1,23 @@
 package com.example.springdi;
 import com.example.springdi.domain.Author;
 import com.example.springdi.domain.FictionAuthor;
+import com.example.springdi.domain.TechAuthor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-//  We use this class to manually configure
-//  the dependencies used in this application
-//  Name of the class doesn't matter
-
-//  Step 1: Apply the @Configuration annotation
 @Configuration
 public class ApplicationConfiguration {
-    //  Step 2: Create a method that returns the type of object
-    //  you want to use as the dependency. Apply @Bean annotation to
-    //  this method
-    //  We need Author object
+    //  When multiple Beans are configured for the same return type
+    //  the user code should use the name
+    //  If context is not used explicitly, @Qualifier can be used
 
-    @Bean()
-    public Author getAuthor() {
+    @Bean(name = "fiction")
+    public Author getFictionAuthor() {
         return new FictionAuthor();
+    }
+
+    @Bean(name = "tech")
+    public Author getTechAuthor() {
+        return new TechAuthor();
     }
 }
