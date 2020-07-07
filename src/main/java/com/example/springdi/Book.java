@@ -1,13 +1,13 @@
 package com.example.springdi;
 
 public class Book {
-    private Author author;
+    private final Author author;
 
-    //  Rather than this class creates its dependencies
-    //  it get the dependencies "provided"
-    //  This is called as Dependency Inversion or
-    //  Inversion of Control (control stands for ability to create)
-    //  This way, Book can be provided with different Author objects
+    //  Author is now an abstract class (an interface)
+    //  Now, the Book doesn't depend on any concrete implementation
+    //  but depends on the most minimal interface
+    //  Dependency injection and programming-to-interface principle
+    //  always go hand in hand
     public Book(Author a) {
         author = a;
     }
